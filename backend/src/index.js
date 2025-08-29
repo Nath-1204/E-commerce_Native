@@ -10,7 +10,7 @@ import { connectDB } from "./lib/db.js";
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-console.log('JWT_SECRET:', process.env.JWT_SECRET || 'Not defined')
+console.log('JWT_SECRET:', process.env.JWT_SECRET || 'Not defined');
 
 
 connectDB();

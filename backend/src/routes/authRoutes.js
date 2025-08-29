@@ -14,9 +14,9 @@ const generateToken = (user) => {
     throw new Error('JWT_SECRET is not defined in .env');
   }
   return jwt.sign(
-    { id: user.id, email: user.email },
+    { id: user._id.toString(), email: user.email },
     process.env.JWT_SECRET,
-    { expiresIn: '15d' }
+    { expiresIn: '35d' }
   );
 };
 
